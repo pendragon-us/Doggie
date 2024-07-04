@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'login_textfield_card.dart';
@@ -13,6 +14,21 @@ class _LogInState extends State<LogIn> {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
+  //sign in function
+  void signIn() async {
+    try{
+      await FirebaseAuth.instance.signInWithCredential(
+        EmailAuthProvider.credential(
+          email: emailController.text,
+          password: passwordController.text,
+        ),
+      );
+      Navigator.pushReplacementNamed(context, '/register');
+    }catch(e){
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +66,7 @@ class _LogInState extends State<LogIn> {
                     backgroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                   ),
-                  onPressed: (){},
+                  onPressed: signIn,
                   child: Text('Log In')
               ),
 
