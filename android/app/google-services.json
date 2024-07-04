@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "533039828110",
+    "project_id": "doggie-e448d",
+    "storage_bucket": "doggie-e448d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533039828110:android:2f8b3e27996311d6a60ddf",
+        "android_client_info": {
+          "package_name": "com.example.doggie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdnGdh3gpryP9rpAS_VcxCQ_5SpDzLZgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
